@@ -47,7 +47,7 @@ const LeftPanel = styled.div`
 
 const Header = () => {
 
-    const usuario = true;
+    const usuario = false;
 
     return ( 
         <StyledHeader>
@@ -81,11 +81,11 @@ const Header = () => {
                                 <>
                                     {/* Menu de administration */ }
                                     <Boton bgColor='true'>
-                                        <Link href="/">Login</Link>
+                                        <Link href="/login">Login</Link>
                                     </Boton>
 
                                     <Boton>
-                                        <Link href="/">Create Account</Link>
+                                        <Link href="/create-account">Create Account</Link>
                                     </Boton>
                                 </>
                             )

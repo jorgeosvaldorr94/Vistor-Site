@@ -1,6 +1,6 @@
 import React from 'react';
 import { Global, css } from '@emotion/react';
-import Header from './Header';
+import Header from '../components/layout/Header';
 import Head from 'next/head';
 
 const Layout = (props) => {
@@ -68,58 +68,9 @@ const Layout = (props) => {
 
       <Header />
 
-      <main>{props.children}</main>
+      <main>{props.children}</main> 
     </>
   );
 };
 
 export default Layout;
-/*
-import React from 'react';
-import { createGlobalStyle } from 'styled-components';
-import Header from './Header';
-
-const GlobalStyles = createGlobalStyle`
-  :root {
-    --gris: #3d3d3d;
-    --gris2: #6f6f6f;
-    --naranja: #da552f;
-  }
-
-  html {
-    font-size: 62.5%;
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  body {
-    font-size: 1.6rem;
-    line-height: 1.5;
-  }
-  h1, h2, h3 {
-    margin: 0 0 2rem 0;
-    line-height: 1.5;
-  }
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  a {
-    text-decoration: none;
-  }
-`;
-
-const Layout = (props) => {
-  return (
-    <>
-      <GlobalStyles />
-      <Header />
-      {props.children}
-    </>
-  );
-};
-
-export default Layout;
-*/

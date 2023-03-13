@@ -35,10 +35,10 @@ const Buscar = () => {
         <ContainerForm>
             <InputText 
                 type='text' 
-                placeholder='Buscar Productos'
+                placeholder='Search Product'
             />
 
-            <InputSubmit type='submit'>Buscar</InputSubmit>
+            <InputSubmit type='submit'>Search</InputSubmit>
         </ContainerForm>
      );
 }
