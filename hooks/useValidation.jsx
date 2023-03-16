@@ -17,7 +17,7 @@ const useValidation = (stateInicial, validar, fn) => {
             };
             guardarSubmitForm(false);
         }
-    }, []);
+    }, [errores]);
 
     // Funcion para cuando el usuario escribe algo
     const handleChange = e => {
@@ -27,7 +27,7 @@ const useValidation = (stateInicial, validar, fn) => {
         })
     };
 
-    // Funcion cuan se hace submit
+    // Funcion cuando se hace submit
     const handleSubmit = e => {
         e.preventDefault();
         const erroresValidacion = validar(valores);
@@ -35,12 +35,19 @@ const useValidation = (stateInicial, validar, fn) => {
         guardarSubmitForm(true);
     };
 
+    // Cuando se realiza el evento de Blur
+    const handleBlur = () => {
+        const erroresValidacion = validar(valores);
+        guardarErrores(erroresValidacion);
+    };
+
     return {
         valores,
         errores,
         submitForm,
         handleSubmit,
-        handleChange
+        handleChange,
+        handleBlur
     };
 }
  
